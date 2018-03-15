@@ -4,13 +4,19 @@ import './App.css';
 
 import LandingPage from './landing/LandingPage';
 import MainPage from './main/MainPage';
+import Footer from './common/Footer';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <Route exact path='/' component={LandingPage} />
-                <Route path='/main' component={MainPage} />
+                <div className="content-wrapper">
+                    <Route exact path='/' component={LandingPage} />
+                    <Route path='/main' component={MainPage} />
+                </div>
+                <div className="footer-wrapper">
+                    <Footer />
+                </div>
             </div>
         );
     }
