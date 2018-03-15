@@ -26,3 +26,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.menu-container {
+    display: flex;
+}
+
+.menu-item {
+    margin: auto;
+}
+
+.menu-item-text {
+    color: gray;
+}
