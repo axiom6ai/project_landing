@@ -21,9 +21,25 @@
     -->
     <title>Axiom6ai Landing</title>
     <script>
-        var TogetherJSConfig_toolName = "Test";
+        var TogetherJSConfig_toolName = "Collaboration";
     </script>
     <script src="https://togetherjs.com/togetherjs-min.js"></script>
+    <script>
+        TogetherJS.on("ready", function() {
+            document.getElementById("togetherjs-dock").setAttribute("style", "background-color: #FFA000");
+            document.getElementById("togetherjs-dock-anchor").setAttribute("style", "display: none");
+            document.getElementById("togetherjs-profile-arrow").setAttribute("style", "display: none");
+            var buttons = document.getElementsByClassName("togetherjs-button");
+            Array.prototype.filter.call(buttons, function(button) {
+                button.addEventListener('mouseenter', function(event) {
+                    this.setAttribute('style', 'background-color: #FF6F00');
+                });
+                button.addEventListener('mouseleave', function(event) {
+                    this.setAttribute('style', 'background-color: #FFA000');
+                });
+            });
+        });
+    </script>
   </head>
   <body>
     <noscript>
