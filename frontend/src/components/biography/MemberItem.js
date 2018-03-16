@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Button, Card, Image } from 'semantic-ui-react';
 import linkedinLogo from '../../images/logo.svg';
 import facebookLogo from '../../images/facebook.svg';
@@ -28,7 +29,9 @@ const MemberItem = ({member, imgSrc}) => {
             </Card.Content>
             <Card.Content extra>
                 <div className='ui two buttons'>
-                    <Button basic color='green'>View Detail</Button>
+                    <Link to={'/main/members/' + member.id}>
+                        <Button basic color='green'>View Detail</Button>
+                    </Link>
                 </div>
             </Card.Content>
         </Card>

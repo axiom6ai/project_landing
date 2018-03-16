@@ -25,6 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "lodash": "^4.17.5",
     "redux-immutable-state-invariant": "^2.1.0"
   }
 }

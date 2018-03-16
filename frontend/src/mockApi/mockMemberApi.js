@@ -9,39 +9,71 @@ const members = [{
     lastName: 'Rafsan',
     pictureKey: 'mohammad_rafsan.jpg',
     bio: {
-
+        en: '',
+        fr: '',
+        ch: ''
     }
 }, {
     id: 2,
     firstName: 'William',
     lastName: 'Hoang',
-    pictureKey: 'william_hoang.jpg'
+    pictureKey: 'william_hoang.jpg',
+    bio: {
+        en: '',
+        fr: '',
+        ch: ''
+    }
 
 }, {
     id: 3,
     firstName: 'Anqi',
     lastName: 'Xu',
-    pictureKey: 'anqi_xu.jpg'
+    pictureKey: 'anqi_xu.jpg',
+    bio: {
+        en: '',
+        fr: '',
+        ch: ''
+    }
 }, {
     id: 4,
-    firtName: 'Xueqi',
+    firstName: 'Xueqi',
     lastName: 'Gao',
-    pictureKey: 'xueqi_gao.jpg'
+    pictureKey: 'xueqi_gao.jpg',
+    bio: {
+        en: '',
+        fr: '',
+        ch: ''
+    }
 }, {
     id: 5,
     firstName: 'Giovanni',
     lastName: 'Laquidara',
-    pictureKey: 'giovanni_laquidara.jpg'
+    pictureKey: 'giovanni_laquidara.jpg',
+    bio: {
+        en: '',
+        fr: '',
+        ch: ''
+    }
 }, {
     id: 6,
     firstName: 'Julien',
     lastName: 'Saad',
-    pictureKey: 'julien_saad.jpg'
+    pictureKey: 'julien_saad.jpg',
+    bio: {
+        en: '',
+        fr: '',
+        ch: ''
+    }
 }, {
     id: 7,
     firstName: 'Shehaaz',
     lastName: 'Saif',
-    pictureKey: 'shehaaz_saif.jpg'
+    pictureKey: 'shehaaz_saif.jpg',
+    bio: {
+        en: '',
+        fr: '',
+        ch: ''
+    }
 }];
 
 class MemberApi {
