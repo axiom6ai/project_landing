@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import MemberList from './MemberList';
+
 import * as memberActions from '../../actions/memberActions';
 
 class BioPage extends Component {
@@ -11,9 +13,11 @@ class BioPage extends Component {
     }
 
     render() {
+        const members = this.props.members;
+        const memberPictures = this.props.memberPictures;
         return (
             <div>
-                Biopage
+                <MemberList members={members} memberPictures={memberPictures} />
             </div>
         );
     }
@@ -26,7 +30,8 @@ BioPage.propTypes = {
 
 function mapStateToProps(state, ownProps) {
     return {
-        members: state.members
+        members: state.members,
+        memberPictures: state.pictures
     };
 }
 
