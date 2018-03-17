@@ -9,9 +9,9 @@ const members = [{
     lastName: 'Rafsan',
     pictureKey: 'mohammad_rafsan.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 }, {
     id: 2,
@@ -19,9 +19,9 @@ const members = [{
     lastName: 'Hoang',
     pictureKey: 'william_hoang.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 
 }, {
@@ -30,9 +30,9 @@ const members = [{
     lastName: 'Xu',
     pictureKey: 'anqi_xu.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 }, {
     id: 4,
@@ -40,9 +40,9 @@ const members = [{
     lastName: 'Gao',
     pictureKey: 'xueqi_gao.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 }, {
     id: 5,
@@ -50,9 +50,9 @@ const members = [{
     lastName: 'Laquidara',
     pictureKey: 'giovanni_laquidara.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 }, {
     id: 6,
@@ -60,9 +60,9 @@ const members = [{
     lastName: 'Saad',
     pictureKey: 'julien_saad.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 }, {
     id: 7,
@@ -70,9 +70,9 @@ const members = [{
     lastName: 'Saif',
     pictureKey: 'shehaaz_saif.jpg',
     bio: {
-        en: '',
-        fr: '',
-        ch: ''
+        en: 'english',
+        fr: 'french',
+        ch: '中文'
     }
 }];
 

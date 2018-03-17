@@ -1,3 +1,16 @@
+.member-detail {
+    display: flex;
+}
+
+.member-detail  > .col-md-6 {
+    padding-left: 30px;
+}
+
+.member-img {
+    max-height: 350px;
+    max-width: 350px;
+}
+
 .linkedin-logo {
     width: 52px;
     height: 52px;
@@ -6,4 +19,8 @@
 .facebook-logo {
     width: 30px;
     height: 30px;
+}
+
+.language-bar {
+    width: 20%;
 }
