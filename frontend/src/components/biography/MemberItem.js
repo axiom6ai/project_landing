@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Button, Card, Image } from 'semantic-ui-react';
 import linkedinLogo from '../../images/logo.svg';
-import facebookLogo from '../../images/facebook.svg';
 import './biography.css';
 
 const MemberItem = ({member, imgSrc}) => {
@@ -19,20 +18,18 @@ const MemberItem = ({member, imgSrc}) => {
                     {member.firstName + ' ' + member.lastName}
                 </Card.Header>
                 <Card.Meta>
-                    Neque porro quisquam
-                    <img className="linkedin-logo" src={linkedinLogo} alt="logo" />
-                    <img className="facebook-logo" src={facebookLogo} alt="logo" />
+                    <a href={member.socialMediaLink.linkedin}>
+                        <img className="linkedin-logo" src={linkedinLogo} alt="logo" />
+                    </a>
                 </Card.Meta>
                 <Card.Description>
-                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                    {member.description}
                 </Card.Description>
             </Card.Content>
             <Card.Content extra>
-                <div className='ui two buttons'>
-                    <Link to={'/main/members/' + member.id}>
-                        <Button basic color='green'>View Detail</Button>
-                    </Link>
-                </div>
+                <Link to={'/main/members/' + member.id}>
+                    <Button basic color='green'>View Detail</Button>
+                </Link>
             </Card.Content>
         </Card>
     );

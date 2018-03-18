@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "lodash": "^4.17.5",
+    "react-html-parser": "^2.0.2",
     "redux-immutable-state-invariant": "^2.1.0"
   }
 }

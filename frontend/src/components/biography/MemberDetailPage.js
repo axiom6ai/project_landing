@@ -4,15 +4,21 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as memberActions from '../../actions/memberActions';
 import * as _ from 'lodash';
+import ReactHtmlParser from 'react-html-parser';
 
 import { Menu } from 'semantic-ui-react';
 import './biography.css';
 
-const languages = [
-    'en',
-    'fr',
-    'ch'
-];
+const languages = [{
+    key: 'en',
+    value: 'English'
+}, {
+    key: 'fr',
+    value: 'Français'
+}, {
+    key: 'ch',
+    value: '中文'
+}];
 
 class MemberDetailPage extends Component {
     constructor(props, context) {
@@ -22,9 +28,7 @@ class MemberDetailPage extends Component {
             selectedLang: languages[0]
         };
 
-        this.setToEnglish = this.setToEnglish.bind(this);
-        this.setToFrench = this.setToFrench.bind(this);
-        this.setToChinese = this.setToChinese.bind(this);
+        this.selectLanguage = this.selectLanguage.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -35,54 +39,42 @@ class MemberDetailPage extends Component {
         }
     }
 
-    setToEnglish() {
+    selectLanguage = (language) => (e) => {
         return this.setState({
-            selectedLang: languages[0]
-        });
-    }
-
-    setToFrench() {
-        return this.setState({
-            selectedLang: languages[1]
-        });
-    }
-
-    setToChinese() {
-        return this.setState({
-            selectedLang: languages[2]
+            selectedLang: language
         });
     }
 
     render() {
         const { selectedLang } = this.state;
+        const member = this.props.member;
         return (
             <div className="container">
                 <Menu pointing secondary className="language-bar">
-                    <Menu.Item name='en'
-                        active={selectedLang === 'en'}
-                        onClick={this.setToEnglish}/>
-                    <Menu.Item name='fr'
-                        active={selectedLang === 'fr'}
-                        onClick={this.setToFrench}/>
-                    <Menu.Item name='ch'
-                        active={selectedLang === 'ch'}
-                        onClick={this.setToChinese}/>
+                    <Menu.Item name='English'
+                        active={selectedLang.value === 'English'}
+                        onClick={this.selectLanguage(languages[0])}/>
+                    <Menu.Item name='Français'
+                        active={selectedLang.value === 'Français'}
+                        onClick={this.selectLanguage(languages[1])}/>
+                    <Menu.Item name='中文'
+                        active={selectedLang.value === '中文'}
+                        onClick={this.selectLanguage(languages[2])}/>
                 </Menu>
                 <div className="row member-detail">
-                    <div>
-                        <div className="col-md-6">
+                    <div className="member-img-wrapper">
+                        <div>
                             <img src={this.props.imgSrc}
                                 className="member-img img-responsive img-rounded" alt="" />
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <p><strong>Lorem ipsum dolor sit amet, ei purt</strong></p>
-                        <p>
-                            {this.props.member.bio[selectedLang]}
-                        </p>
-                        <blockquote>
-                            Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei. Civibus perfecto rationibus id his, est noster nostrud aliquando at.
-                        </blockquote>
+                    <div className="col-sm-12 col-md-6">
+                        <div className="member-info-wrapper">
+                            <h2><strong>{member.firstName + ' ' + member.lastName}</strong></h2>
+                            <p>
+                                {ReactHtmlParser(member.bio[selectedLang.key])}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
