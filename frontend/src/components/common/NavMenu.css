@@ -2,8 +2,7 @@
     background-color: transparent;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    font-family: Roboto-Regular,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-    background: rgba(34,34,51);
+    background: rgba(34,34,51,.9);
     position: fixed!important;
     width: 100%;
     z-index: 100;
@@ -16,11 +15,17 @@
 }
 
 .nav-item > a {
+    position: relative;
+    letter-spacing: 1px;
     color: rgb(255,255,255,.8);
+    padding: 16px 0;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 1s,transform 1s ease-out;
 }
 
-.nav-item > a:hover {
-    color: rgb(0,193,222.8);
+.focus:hover {
+    border-bottom: 3px solid rgb(0,193,222,.8);
+    color: rgb(0,193,222,.8);
 }
 
 .navbar-list {
@@ -28,7 +33,7 @@
 }
 
 .fixed {
-    background: rgba(34,34,51,.9);
+    background: rgba(34,34,51,.7);
     -moz-transition: all .1s ease-in;
     /* WebKit */
     -webkit-transition: all .1s ease-in;

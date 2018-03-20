@@ -1,27 +1,5 @@
-.landing-header.masthead {
-    position: relative;
-    background-color: #343a40;
-    background: url("../../images/bg-masthead.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-}
-
-.landing-header.masthead .overlay {
-    position: absolute;
-    background-color: #212529;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-}
-
-.landing-header.masthead h1 {
-    font-size: 2rem;
+.carousel-inner {
+    height: 600px;
 }
 
 .landing-body {
@@ -39,4 +17,26 @@
 .menu-item-text {
     color: gray;
     text-align: center;
+}
+
+
+.carousel.fade {
+     opacity: 1;
+}
+.carousel.fade .carousel-item {
+    transition: opacity ease-out .7s;
+    left: 0;
+    opacity: 0; /* hide all slides */
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+.carousel.fade .carousel-item:first-child {
+    top: auto;
+    opacity: 1; /* show first slide */
+    position: relative;
+}
+.carousel.fade .carousel-item.active {
+    opacity: 1;
 }

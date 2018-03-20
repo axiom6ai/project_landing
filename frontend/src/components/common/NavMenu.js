@@ -59,28 +59,28 @@ class NavMenu extends Component {
                     <div className="collapse navbar-collapse navbar-list" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <NavLink className="nav-link"
+                                <NavLink className="nav-link focus"
                                     to="/main/bio"
                                     activeClassName="active">
                                     Bio
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link"
+                                <NavLink className="nav-link focus"
                                     to="/main/demo"
                                     activeClassName="active">
                                     Demo
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link"
+                                <NavLink className="nav-link focus"
                                     to="/main/demo"
                                     activeClassName="active">
                                     Articles
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link"
+                                <NavLink className="nav-link focus"
                                     to="/main/demo"
                                     activeClassName="active">
                                     Partner

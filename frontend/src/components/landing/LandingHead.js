@@ -1,38 +1,37 @@
 import React, { Component } from 'react';
+import children from '../../images/children.jpg';
+import coding from '../../images/coding_web23.jpg';
+import swift from '../../images/swiftother01.jpg';
+
+import * as $ from 'jquery';
 
 class LandingHead extends Component {
+
+    componentDidMount() {
+        $('.carousel').carousel({
+            interval: 3000
+        });
+    }
+
     render() {
         return (
-            <div>
-                <header className="masthead text-white text-center landing-header">
-                    <div className="overlay"></div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-9 mx-auto">
-                                <h1 className="mb-5">
-                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
-                                </h1>
-                            </div>
-                            <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                                <form>
-                                    <div className="form-row">
-                                        <div className="col-12 col-md-9 mb-2 mb-md-0">
-                                            <input type="email"
-                                                className="form-control form-control-lg"
-                                                placeholder="Enter your email..." />
-                                        </div>
-                                        <div className="col-12 col-md-3">
-                                            <button type="submit"
-                                                className="btn btn-block btn-lg btn-primary">
-                                                Sign up!
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+            <div id="carouselExampleIndicators" className="carousel fade" data-ride="carousel">
+                <ol className="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img className="d-block w-100" src={swift} alt="First slide"/>
                     </div>
-                </header>
+                    <div className="carousel-item">
+                        <img className="d-block w-100" src={children} alt="Second slide"/>
+                    </div>
+                    <div className="carousel-item">
+                        <img className="d-block w-100" src={coding} alt="Third slide"/>
+                    </div>
+                </div>
             </div>
         );
     }
