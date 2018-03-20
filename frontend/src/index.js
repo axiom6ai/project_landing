@@ -11,9 +11,7 @@ import { loadMembers, loadMembersPictures } from './actions/memberActions';
 import App from './components/App';
 
 import './index.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/semantic-ui-css/semantic.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+import './include/bootstrap';
 
 const store = configureStore();
 store.dispatch(loadMembers());
